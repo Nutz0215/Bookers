@@ -1,0 +1,21 @@
+<% if flash[:create_message] %>
+<div class='flash'>
+    <%= flash[:create_message] %>
+</div>
+<% end %>
+<% if flash[:edit_message] %>
+<div class='flash'>
+    <%= flash[:edit_message] %>
+</div>
+<% end %>
+<p><b>Title: </b><%= @book.title %></p>
+
+<p><b>Body: </b><%= @book.body %></p>
+
+<span>
+    <%= link_to 'Edit', edit_book_path(@book.id) %>
+</span>
+|
+<span>
+    <%= link_to 'Back', books_path %>
+</span>
